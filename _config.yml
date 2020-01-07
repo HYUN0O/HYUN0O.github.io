@@ -108,7 +108,7 @@ analytics:
 # Site Author
 author:
   name             : "Donggi Hong"
-  avatar           : "/assets/images/image.png"
+  avatar           : "/assets/image.png"
   bio              : "Hello :)"
   location         : "Uiwang, South Korea"
   email            : "donggi9313@gmail.com"
