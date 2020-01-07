@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 locale                   : "ko-KR"
 title                    : "Hello, Blog!"
 title_separator          : "|"
-subtitle                 : "sub" # site tagline that appears below site title in masthead
+subtitle                 : "since 2020" # site tagline that appears below site title in masthead
 name                     : "Donggi Hong"
 description              : "hello :)"
 url                      : "https://donggi9313.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
@@ -108,7 +108,7 @@ analytics:
 # Site Author
 author:
   name             : "Donggi Hong"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/image.jpg"
   bio              : "Hello :)"
   location         : "Uiwang, South Korea"
   email            : "donggi9313@gmail.com"
