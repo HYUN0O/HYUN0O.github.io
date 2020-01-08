@@ -1,0 +1,21 @@
+---
+categories: 
+  - git blog config
+toc: true
+
+title: "github 블로그 글자 크기 바꾸기"
+author_profile: true
+
+# tags: # 태그 사용
+#    - tag1
+#    - tag2
+
+---
+
+**개요**
+
+시작하기 전, 이 글은 **minimal-mistakes**를 기준으로 작성되었다.
+
+# 글자 크기 바꾸기
+1. 방법
+    * 
