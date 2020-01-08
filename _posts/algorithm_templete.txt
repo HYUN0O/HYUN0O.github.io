@@ -35,15 +35,15 @@ https://programmers.co.kr/learn/courses/30/lessons/17679 #주소
 
 
 ## 구현 방법
-+ 1
-  + 
-+ 2
-  + 
-+ 3
-
+1. 1
+    + 
+2. 2
+    + 
+3. 3
+   +
 
 ## Pain Points
-+ 1
-  + 
-+ 2
+1. 1
+    + 
+2. 2
 
