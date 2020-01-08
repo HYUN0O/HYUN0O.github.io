@@ -9,7 +9,7 @@ $primary-color: #9966ff !default;
 // $primary-color: #ff0000 !default;
 $border-color: mix(#fff, $text-color, 75%) !default;
 $footer-background-color: #000 !default;
-$link-color: #dd99ff !default;
+$link-color: #9900cc !default;
 // $link-color: #ff0000 !default;
 $masthead-link-color: $text-color !default;
 $masthead-link-color-hover: $text-color !default;
@@ -33,6 +33,9 @@ $base0d: #96cbfe !default;
 $base0e: #ff73fd !default;
 $base0f: #b18a3d !default;
 
+.page__title{
+  color: $link-color;
+}
 .page__content {
   .notice,
   .notice--primary,
@@ -52,6 +55,3 @@ $base0f: #b18a3d !default;
   color: inherit;
 }
 
-#page-title{
-  color: $link-color;
-}
