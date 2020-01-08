@@ -7,7 +7,7 @@ title: 문제이름 #00000
 author_profile: true
 
 tags:
-   - 프로그래머스/
+   - 프로그래머스/백준
 
 ---
 
@@ -26,3 +26,21 @@ https://programmers.co.kr/learn/courses/30/lessons/17679 #주소
 </div>
 </details>
 
+# 입력 형식
++ 입력.
+
+# 출력 형식
++ 출력.
+
+# 구현 방법
+1. 1
++ 
+2. 2
++ 
+3. 3
+
+# Pain Points
+1. 1
++ 
+2. 2
+3. 3
