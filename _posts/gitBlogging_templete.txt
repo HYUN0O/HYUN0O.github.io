@@ -12,7 +12,7 @@ author_profile: true
 
 ---
 
-**개요**
+(대충 개요 적힌 글)
 
 시작하기 전, 이 글은 **minimal-mistakes**를 기준으로 작성되었다.
 
