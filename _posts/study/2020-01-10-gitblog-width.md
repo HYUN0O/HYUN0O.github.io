@@ -1,0 +1,78 @@
+---
+categories: 
+  - git blog config
+toc: true
+
+title: "Github Blog 좌우 여백 줄이기"
+author_profile: true
+
+# tags: # 태그 사용
+#    - tag1
+#    - tag2
+
+---
+
+[전 글](https://donggi9313.github.io/git%20blog%20config/gitblog-%EA%B8%80%EC%9E%90%ED%81%AC%EA%B8%B0/)에서 언급했다시피, 아직도 좌우 사이드바 여백이 너무 넓은게 맘에 안든다!
+
+그러면 모다??? 좌우 여백을 줄여야 씅에 찰 것만 같다.
+
+지체하지 않고, 바로 시작하겠다.
+
+시작하기 전, 이 글은 **minimal-mistakes**를 기준으로 작성되었다.
+
+# 좌우 사이드바 크기 줄이기
+## 1. _sass/minimal-mistakes/_variables.scss 수정
+
+![레이아웃_수정전](./assets/image/좌우너비.png)
+
+전 글에서 처럼, mmistakes는 사용자의 환경에 따라 유동적으로 레이아웃의 크기를 변경시킨다!
+
+창이 좁을 때, 보통, 넓을 때 이렇게 세 가지 경우에 따라 유동적으로 좌우측 레이아웃의 크기를 결정한다.
+
+
+```css
+/*
+   Grid
+   ========================================================================== */
+$right-sidebar-width-narrow: 200px !default;
+$right-sidebar-width: 300px !default;
+$right-sidebar-width-wide: 400px !default;
+```
+    
+## 2. 좌우 레아이웃 크기 조정
+
+나는 프로필에 긴 내용이 들어가는 부분이 없으니, 200px정도면 일반 환경에서 보는 데 문제가 없을 것 같다.
+
+right-sidebar이라고 해서 우측 사이드바만 바뀌는건 아니니 걱정하지 않아도 된다!
+
+```css
+/*
+   Grid
+   ========================================================================== */
+$right-sidebar-width-narrow: 150px !default;
+$right-sidebar-width: 200px !default;
+$right-sidebar-width-wide: 250px !default;
+// $right-sidebar-width-narrow: 200px !default;
+// $right-sidebar-width: 300px !default;
+// $right-sidebar-width-wide: 400px !default;
+```
+
+원래 있던 값은 또 언제 필요해질지 모르니 주석처리하여 보관하였다.
+
+참고로, 커밋부터 적용까지 짧게는 30초, 길게는 3분 정도 시간이 걸릴 수 있다!
+
+너무 조급해하지 말고, 커피 한 잔이나 유튜브 한 편정도 보고 F5를 눌러볼 수 있는 환경에 있었으면 좋겠다.
+
+## 3. 변경 후
+
+![레이아웃_수정후](./assets/image/좌우너비(후).png)
+
+짜잔! ~~힘의 차이가 느껴지십니까?~~ 는 아니고.. 확실히 넓어져서 전보다 뭔가 탁 트인 느낌이다!
+
+개발자 모드에서 좁게 만들어서 narrow를 기준으로 봐도, 150px정도면 딱히 레이아웃이 망가지지도 않고 괜찮다.
+
+기본적으로 안구 질환을 달고 사는 개발자들을 위해 큼직큼직하게 만드신건지는 잘 모르겠지만,
+
+뭔가 모든 레이아웃들이 덩어리로 느껴지던 처음에 비해서 뭔가 더 마음에 들어졌다.
+
+뭐라고 해야하나, 레고 하나하나 조립해서 슬슬 원하는 형상을 갖춰가는 그런 느낌이라 굉장히 좋당.
