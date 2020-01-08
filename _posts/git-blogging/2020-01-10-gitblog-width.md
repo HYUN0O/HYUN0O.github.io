@@ -23,7 +23,7 @@ author_profile: true
 # 좌우 사이드바 크기 줄이기
 ## 1. _sass/minimal-mistakes/_variables.scss 수정
 
-![레이아웃_수정전](./assets/image/좌우너비.png)
+![레이아웃_수정전](https://github.com/donggi9313/donggi9313.github.io/blob/master/assets/image/%EC%A2%8C%EC%9A%B0%EB%84%88%EB%B9%84.png?raw=true)
 
 전 글에서 처럼, mmistakes는 사용자의 환경에 따라 유동적으로 레이아웃의 크기를 변경시킨다!
 
@@ -65,7 +65,7 @@ $right-sidebar-width-wide: 250px !default;
 
 ## 3. 변경 후
 
-![레이아웃_수정후](./assets/image/좌우너비(후).png)
+![레이아웃_수정후](https://github.com/donggi9313/donggi9313.github.io/blob/master/assets/image/%EC%A2%8C%EC%9A%B0%EB%84%88%EB%B9%84(%ED%9B%84).png?raw=true)
 
 짜잔! ~~힘의 차이가 느껴지십니까?~~ 는 아니고.. 확실히 넓어져서 전보다 뭔가 탁 트인 느낌이다!
 
