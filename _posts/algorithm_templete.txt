@@ -1,0 +1,28 @@
+---
+categories: 
+  - algorithm
+toc: true
+
+title: 문제이름 #00000
+author_profile: true
+
+tags:
+   - 프로그래머스/
+
+---
+
+https://programmers.co.kr/learn/courses/30/lessons/17679 #주소
+
+
+<details>
+<summary><b>코드 보기</b></summary>
+<div markdown="1">
+
+```python
+
+내 코드
+
+```
+</div>
+</details>
+
