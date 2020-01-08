@@ -1,0 +1,95 @@
+---
+categories: 
+  - git blog config
+toc: true
+
+title: "Github Blog 제목, 링크, 강조색 바꾸기"
+author_profile: true
+
+# tags: # 태그 사용
+#    - tag1
+#    - tag2
+
+---
+
+**개요**
+
+시작하기 전, 이 글은 **minimal-mistakes**를 기준으로 작성되었다.
+
+# 제목, 링크, 강조색 바꾸기
+
+## 1. /_sass/minimal-mistakes/skins/_(자신의스킨).scss
+
+![제목,링크,강조색_수정전](https://github.com/donggi9313/donggi9313.github.io/blob/master/assets/image/%EC%A2%8C%EC%9A%B0%EB%84%88%EB%B9%84(%ED%9B%84).png?raw=true)
+
+저기 경로에 보면 (자신의스킨) 이라고 되어 있는 부분이 있다.
+
+그건 뭐 대단한건 아니고, 자신이 /_config.yml 에서 설정했던 스킨의 이름을 넣으면 된다!
+
+설정을 따로 하지 않은 기본 값이라면 default.scss로 가면 될 것이고,
+
+나같은 경우는 contrast라는 스킨을 커스텀 할 생각이니 contrast.scss로 이동하면 된다.
+
+## 2. 원하는 색상 조정
+
+```css
+/* Colors */
+$text-color: #000 !default;
+$muted-text-color: $text-color !default;
+$primary-color: #ff0000 !default;           // 이 부분이 강조색이다. 우상단 메뉴, 인용문 등의 강조색.
+$border-color: mix(#fff, $text-color, 75%) !default;
+$footer-background-color: #000 !default;
+$link-color: #ff0000 !default;              // 이 부분이 링크의 색깔을 결정한다.
+$masthead-link-color: $text-color !default;
+$masthead-link-color-hover: $text-color !default;
+$navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
+```
+
+해당 부분을 자신이 원하는 색깔로 바꿔주면 된다!
+
+또한, 게시글의 제목 색을 바꾸기 위해서는 아래 코드를 추가로 작성해야한다.
+
+```css
+.page__title{
+  color: $link-color;
+}
+```
+
+위의 코드를 같은 파일 내의 여백에 붙여넣으면, 링크 컬러와 똑같은 색깔로 동기화된다.
+
+자신은 링크 색깔과 다른 색깔로 사용하고 싶다면, ```color: @link-color;```이 아닌 ```color: #원하는 rgb색;```
+
+을 넣으면 간단히 원하는 색상으로 변경 할 수 있다.
+
+## 3. 변경 후
+
+```css
+/* Colors */
+$text-color: #000 !default;
+$muted-text-color: $text-color !default;
+$primary-color: #9966ff !default;           // 이 부분이 강조색이다. 우상단 메뉴, 인용문 등의 강조색.
+// $primary-color: #ff0000 !default;
+$border-color: mix(#fff, $text-color, 75%) !default;
+$footer-background-color: #000 !default;
+$link-color: #9900cc !default;              // 이 부분이 링크의 색깔을 결정한다.
+// $link-color: #ff0000 !default;
+$masthead-link-color: $text-color !default;
+$masthead-link-color-hover: $text-color !default;
+$navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
+```
+
+
+![제목,링크,강조색_수정후1](https://github.com/donggi9313/donggi9313.github.io/blob/master/assets/image/%EC%83%89%EC%83%81%EB%B3%80%EA%B2%BD(%ED%9B%84).png?raw=true)
+
+![제목,링크,강조색_수정후2](https://github.com/donggi9313/donggi9313.github.io/blob/master/assets/image/%EC%83%89%EC%83%81%EB%B3%80%EA%B2%BD(%ED%9B%842).png?raw=true)
+
+
+짠! 간단히 변경하였다.
+
+쨍한 보라색으로 색을 바꿨더니 내가 아무리 보라색을 좋아해도 생각보다 너무 과한 느낌이라, 더 어두운 보라색으로 바꿀 예정이다.
+
+내가 알려준 두 가지 외에도 모든 종류의 색상을 원하는 색으로 변경 가능하다.
+
+다음에 손 댈 부분은 상단의 메뉴바쪽을 좀 건드려야겠다.
+
+블로그 제목도 쪼끄맣고, 배경색도 아주 하얀색에 가까운 연보라색이면 예쁠 것 같다!
