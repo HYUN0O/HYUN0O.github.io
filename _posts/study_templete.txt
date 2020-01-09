@@ -1,11 +1,6 @@
 ---
 categories: 
   - study
-toc: true
-
-title: 0000이 뭘까?
-author_profile: true
-
 tags:
    - 
 ---
