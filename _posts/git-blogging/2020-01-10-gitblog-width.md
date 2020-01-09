@@ -3,7 +3,7 @@ categories:
   - git blog config
 toc: true
 
-title: "Github Blog 좌우 여백 줄이기"
+title: "Blog mmistakes 좌우 여백 줄이기"
 author_profile: true
 
 # tags: # 태그 사용
