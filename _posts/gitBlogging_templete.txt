@@ -1,15 +1,9 @@
 ---
 categories: 
   - git blog config
-toc: true
-
-title: "Github Blog 뭔가 해보기"
-author_profile: true
-
 # tags: # 태그 사용
 #    - tag1
 #    - tag2
-
 ---
 
 (대충 개요 적힌 글)
