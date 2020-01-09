@@ -1,10 +1,5 @@
 ---
-categories: 
-  - blogging
-toc: true
-
 title: "Hello, world!"
-author_profile: true
 
 # tags: # 태그 사용
 #    - tag1
