@@ -3,6 +3,7 @@ categories:
   - study
 tags:
    - 
+title: 기술-(번호)-주제
 ---
 
 @@공부배경
