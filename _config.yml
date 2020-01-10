@@ -38,7 +38,7 @@ comments:
   facebook:
     # https://developers.facebook.com/docs/plugins/comments
     appid                :
-    num_posts            : # 5 (default)
+    num_posts            : 5 # 5 (default)
     colorscheme          : # "light" (default), "dark"
   utterances:
     theme                : # "github-light" (default), "github-dark"
@@ -109,7 +109,7 @@ analytics:
 author:
   name             : "Donggi Hong"
   avatar           : "/assets/image.png"
-  bio              : "Hello :)"
+  bio              : "1년차 늒네 개발자!"
   location         : "Uiwang, South Korea"
   email            : "donggi9313@gmail.com"
   links:
