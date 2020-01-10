@@ -4,6 +4,7 @@ categories:
 tags:
    - mmistakes
    - github.io
+   - StackEdit
 ---
 처음 글 4~5개 정도는 github에서 일일히 썼는데, 하다보니 이거 사람이 할 짓이 안되는 것 같다.
 
