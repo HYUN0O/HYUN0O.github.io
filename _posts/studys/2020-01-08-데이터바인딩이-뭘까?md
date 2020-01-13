@@ -1,13 +1,8 @@
 ---
 categories: 
-  - study
-toc: true
-
-title: 데이터바인딩이 뭘까?
-author_profile: true
-
+  - Study
 tags:
-   - 데이터바인딩
+  - Databinding
 ---
 
 이제 슬슬 프론트엔드와 관련된 기술을 하나하나 배우다보니, 데이터바인딩이라는 기술이 계속 귀에 들어온다.
