@@ -2,11 +2,12 @@
 categories: 
    - Study
 tags:
-   - Design Models
+   - 
 ---
 오늘은 개발자로서 기본으로 알아야 하는 지식 중 하나인 디자인패턴중 현재 가장 유명하고 많이 쓰이고, 묶어서 배워두면 좋은 패턴인 MVC, MVP, MVVM에 대해 알아보려고 한다.
 
-# ☝ 그게 뭔데? 왜 세 개나 있는데?
+# Design Patterns
+## ☝ 그게 뭔데? 왜 세 개나 있는데?
 
 우선, 디자인 패턴은 소프트웨어 설계 시 발생하는 많은 문제들이 발생할 때, 이런 문제들을 쉽고 효율적으로 해결할 수 있도록 구성한 코딩방법, 또는 구조를 의미한다.
 
@@ -16,7 +17,7 @@ tags:
 
 역할분담이 잘 이루어진다면 개발효율은 상승할 것이며, 유지보수가 편해짐 역시 당연하다.
 
-# 🤞 그럼 그 세 가지가 뭔데?
+## 🤞 그럼 그 세 가지가 뭔데?
 
  1. MVC <sub> Model + View + Controller</sub>
  2. MVP<sub> Model + View + Presenter</sub>
@@ -41,9 +42,9 @@ tags:
 다음은 세 모델의 비교를 해보자!
 
 
-# 🤟 그래서 걔네가 뭐가 다른데?
+## 🤟 그래서 걔네가 뭐가 다른데?
 
-## 1. 동작 방식
+### 1. 동작 방식
  1. MVC <sub> Model + View + Controller</sub>
 	 1. 사용자의 동작을 Controller이 입력받음.
 	 2. Controller이 입력받은 동작을 Model으로 전달함.
@@ -67,7 +68,7 @@ tags:
 	 5. View Model은 받은 데이터를 가공하여 저장함.
 	 6. View는 View Model과 Data Binding을 통해 UI를 표시함.
 
-## 2. 특징
+### 2. 특징
 
  1. MVC <sub> Model + View + Controller</sub>
 	 - Controller이 여러 개의 View를 조작 가능.
@@ -82,7 +83,7 @@ tags:
 		 - 이로 인해 View-View Model간의 **의존성이 없음**!
 	 - 여러개의 View가 1개의 View Model에 관계될 수 있음.
 
-## 3. 장점
+### 3. 장점
 
  1. MVC <sub> Model + View + Controller</sub>
 	 - 단순함.
@@ -98,7 +99,7 @@ tags:
 		- 유닛 테스트에 있어 매우 유리함.
 	- 중복되는 코드를 모듈화 할 수 있음.
 
-## 4. 단점
+### 4. 단점
 
  1. MVC <sub> Model + View + Controller</sub>
 	 - View와 Model 사이의 의존성이 너무 높다.
@@ -113,7 +114,7 @@ tags:
 	- View Model의 설계가 어려움.
 
 
-# 🍀 결론
+## 🍀 결론
 
 MVC를 발전시킨 것이 MVP이고, 발전하여 MVVM이 된 것이 분명 맞지만, 그렇다고 MVVM이 항상 MVC보다 좋다는 것은 아니다!
 
