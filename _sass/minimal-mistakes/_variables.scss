@@ -29,9 +29,12 @@ $bodoni: "Bodoni MT", serif !default;
 $calisto: "Calisto MT", serif !default;
 $garamond: Garamond, serif !default;
 
-$global-font-family: 'Jeju Gothic', serif;
-$header-font-family: 'Jeju Gothic', serif;
-$caption-font-family: 'Jeju Gothic', serif;
+/* custom typefaces */
+$jeju-gothic: Jeju Gothic, serif !default;
+
+$global-font-family: $jeju-gothic!default;
+$header-font-family: $jeju-gothic !default;
+$caption-font-family: $jeju-gothic !default;
 // $global-font-family: $sans-serif !default;
 // $header-font-family: $sans-serif !default;
 // $caption-font-family: $serif !default;
