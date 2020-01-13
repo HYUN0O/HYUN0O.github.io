@@ -32,12 +32,12 @@ $garamond: Garamond, serif !default;
 /* custom typefaces */
 $jeju-gothic: Jeju Gothic, serif !default;
 
-$global-font-family: $jeju-gothic!default;
-$header-font-family: $jeju-gothic !default;
-$caption-font-family: $jeju-gothic !default;
-// $global-font-family: $sans-serif !default;
-// $header-font-family: $sans-serif !default;
-// $caption-font-family: $serif !default;
+// $global-font-family: $jeju-gothic!default;
+// $header-font-family: $jeju-gothic !default;
+// $caption-font-family: $jeju-gothic !default;
+$global-font-family: $sans-serif !default;
+$header-font-family: $sans-serif !default;
+$caption-font-family: $serif !default;
 
 /* type scale */
 $type-size-1: 2.441em !default; // ~39.056px
