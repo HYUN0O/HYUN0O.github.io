@@ -77,10 +77,10 @@ google:
   search_engine_id       : # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
 # SEO Related
-google_site_verification :
-bing_site_verification   :
-yandex_site_verification :
-naver_site_verification  :
+google_site_verification : "google61c0c858403e1d7b.html"
+bing_site_verification   : 
+yandex_site_verification : 
+naver_site_verification  : 
 
 # Social Sharing
 twitter:
@@ -99,9 +99,9 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider               : "google-gtag" # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :
+    tracking_id          : "UA-156107188-1"
     anonymize_ip         : # true, false (default)
 
 
@@ -109,7 +109,7 @@ analytics:
 author:
   name             : "Donggi Hong"
   avatar           : "/assets/image.png"
-  bio              : "1년차 늒네 개발자!"
+  bio              : "1년차 뉴우비 개발자!"
   location         : "Uiwang, South Korea"
   email            : "donggi9313@gmail.com"
   links:
