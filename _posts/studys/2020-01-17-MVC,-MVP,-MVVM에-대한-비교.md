@@ -2,7 +2,7 @@
 categories: 
    - study
 tags:
-   - 
+   - Design Models
 ---
 오늘은 개발자로서 기본으로 알아야 하는 지식 중 하나인 디자인패턴중 현재 가장 유명하고 많이 쓰이고, 묶어서 배워두면 좋은 패턴인 MVC, MVP, MVVM에 대해 알아보려고 한다.
 
