@@ -21,7 +21,7 @@ title_separator          : "|"
 subtitle                 : "since 2020" # site tagline that appears below site title in masthead
 name                     : "Danggai"
 description              : "hello :)"
-url                      : "https://danggai.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://donggi9313.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "donggi9313/donggi9313.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "/assets/icon.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
