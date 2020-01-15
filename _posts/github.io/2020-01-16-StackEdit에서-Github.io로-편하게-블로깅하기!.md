@@ -25,7 +25,7 @@ IOS나 mac에서만 동작하는 마크다운 에디터도 많았지만, 나는 
 
 시작하기 전, 이 글은 **minimal-mistakes와 StackEdit**사용 환경에서 작성되었다.
 
-# StackEdit에서 Github.io로 편하게 블로깅하기!
+# StackEdit에서 편하게 블로깅하기!
 
 ## ☝ 기본 사용 환경 설정
 
