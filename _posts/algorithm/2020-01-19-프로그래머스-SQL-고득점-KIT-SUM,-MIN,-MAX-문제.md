@@ -47,7 +47,7 @@ WHERE DATETIME >= ALL(SELECT DATETIME FROM ANIMAL_INS)
 
 3. `ANIMAL_INS`라는 테이블에 모든 정보가 들어있으므로, `FROM ANIMAL_INS`를 사용하였다.
 
-4. `DATETIME`이 가장 큰 경우를 찾는 것이므로, 다른 모든 DATETIME보다 크거나 같아야 한다. 그러므로 subquery를 이용하여`WHERE DATETIME >= ALL(SELECT DATETIME FROM ANIMAL_INS)`을 사용하였다.
+4. `DATETIME`이 가장 큰 경우를 찾는 것이므로, 다른 모든 `DATETIME`보다 크거나 같아야 한다. 그러므로 subquery를 이용하여`WHERE DATETIME >= ALL(SELECT DATETIME FROM ANIMAL_INS)`을 사용하였다.
 
 ---
 ---
