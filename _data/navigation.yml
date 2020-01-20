@@ -4,6 +4,8 @@ main:
 #     url: "/about/" # 클릭시 이동할 URL
   - title: "Yearly"
     url: /year-archive/
+  - title: "Monthly"
+    url: /month-archive/
   - title: "Tag"
     url: /tags/
   - title: "Category"
