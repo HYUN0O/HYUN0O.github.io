@@ -9,7 +9,7 @@ layout: archive
   {% for month in postsInMonth %}
     <li>
       <a href="#{{ year.name }}{{ month.name }}">
-        <strong>{{ year.name }}/{{ month.name }}</strong> <span class="taxonomy__count">{{ month.items | size }}</span>
+        <strong>{{ year.name }}+"/"+{{ month.name }}</strong> <span class="taxonomy__count">{{ month.items | size }}</span>
       </a>
     </li>
   {% endfor %}
