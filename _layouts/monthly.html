@@ -5,11 +5,11 @@ layout: archive
 {{ content }}
 
 <ul class="taxonomy__index">
-  {% assign postsInMonth = site.posts | group_by_exp: 'post', 'post.date | date: "%Y%m"' %}
+  {% assign postsInMonth = site.posts | group_by_exp: 'post', 'post.date | date: "%Y/%m"' %}
   {% for month in postsInMonth %}
     <li>
       <a href="#{{ month.name }}">
-        <strong>{%'post.date | date: "%Y"'%}/{%'post.date | date: "%m"'%}</strong> <span class="taxonomy__count">{{ month.items | size }}</span>
+        <strong>{{ month.name }}</strong> <span class="taxonomy__count">{{ month.items | size }}</span>
       </a>
     </li>
   {% endfor %}
