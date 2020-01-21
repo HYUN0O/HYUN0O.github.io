@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://dveamer.github.io/sitemap.xml
+Sitemap: http://danggai.github.io/sitemap.xml
