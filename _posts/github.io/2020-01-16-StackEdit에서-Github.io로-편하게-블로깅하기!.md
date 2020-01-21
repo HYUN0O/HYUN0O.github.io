@@ -176,6 +176,7 @@ IOS나 mac에서만 동작하는 마크다운 에디터도 많았지만, 나는 
 삭제했다면 다시 ```Publish to GitHub```를 클릭해주자.
 
 ![(그림18)](https://github.com/donggi9313/donggi9313.github.io/blob/master/assets/image/20200115/stackedit18.jpg?raw=true)
+
 다른 입력값은 방금 전과 동일하게 해주고, 가장 아래의 Templates만 방금 만든 템플릿으로 바꿔주고, 다시 ```OK```를 눌러보자!
 
 다시 글이 올라갔을테니, 다시 블로그에서 글을 확인해보자.
