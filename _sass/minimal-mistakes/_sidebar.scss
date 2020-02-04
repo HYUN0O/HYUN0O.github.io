@@ -117,8 +117,8 @@
 .author__avatar {
   display: table-cell;
   vertical-align: top;
-  width: 36px;
-  height: 36px;
+  width: 42px;
+  height: 42px;
 
   @include breakpoint($large) {
     display: block;
@@ -131,7 +131,7 @@
     border-radius: 20%;
 
     @include breakpoint($large) {
-      padding: 5px;
+      padding: 3px;
       border: 2px solid $border-color;
     }
   }
