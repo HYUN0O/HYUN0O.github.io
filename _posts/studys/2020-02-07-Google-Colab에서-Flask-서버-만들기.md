@@ -111,20 +111,20 @@ app.run()
 해당 폴더는 재시작하면 사라지니, 오래 보관할 목적이라면 구글 드라이브에 저장하는 것이 좋다.
 
 **/templates/home.html**
-```html
-<html>
-	<head>
-	    <title>
-	        hello, world!
-	    </title>
-	    <style>
-	    </style>
-	</head>
-	<body>
-	    <h1>Hello, World! - from render_template</h1>
-	</body>
-</html>
-```
+
+	<html>
+		<head>
+		    <title>
+		        hello, world!
+		    </title>
+		    <style>
+		    </style>
+		</head>
+		<body>
+		    <h1>Hello, World! - from render_template</h1>
+		</body>
+	</html>
+
 
 html 문법에 대한 이야기는 길어지니, 아래 실행 결과를 직접 확인해보자.
 
@@ -144,13 +144,12 @@ def home():
 ```
 
 **/templates/home.html**
-```html
-<!-- ..... -->
-	<body>
-	    <h1>Hello, {{ id }}!</h1> - from render_template
-	</body>
-</html>
-```
+
+	<!-- ..... -->
+		<body>
+		    <h1>Hello, {{ id }}!</h1> - from render_template
+		</body>
+	</html>
 
 위의 코드를 실행하면 아래와 같은 결과를 얻을 수 있다.
 
@@ -176,30 +175,29 @@ app.run()
 ```
 
 **/templates/home.html**
-```html
-<!-- ..... -->
-	<body>
-	    {% if id == None or id == "" %}
-	        <h1>사용자 이름을 입력해주세요.</h1><br>
-	    {% else %}
-	        {% if id in userList %}
-	            <h1>환영합니다, {{ id }} 님. </h1><br>
-	        {% else %}
-	            <h1>{{ id }} 님은 유효하지 않은 사용자입니다. </h1><br>
-	        {% endif %}
-	    {% endif %}
-	    <form method="GET" action="/auth">
-	        <div>
-	            <label for="id">ID: </label>
-	            <input type="text" name="id">
-	        </div>
-	        <div class='button'>
-	            <button type="submit">입력</button>
-	        </div>
-	    </form>
-	</body>
-</html>
-```
+
+	<!-- ..... -->
+		<body>
+		    {% if id == None or id == "" %}
+		        <h1>사용자 이름을 입력해주세요.</h1><br>
+		    {% else %}
+		        {% if id in userList %}
+		            <h1>환영합니다, {{ id }} 님. </h1><br>
+		        {% else %}
+		            <h1>{{ id }} 님은 유효하지 않은 사용자입니다. </h1><br>
+		        {% endif %}
+		    {% endif %}
+		    <form method="GET" action="/auth">
+		        <div>
+		            <label for="id">ID: </label>
+		            <input type="text" name="id">
+		        </div>
+		        <div class='button'>
+		            <button type="submit">입력</button>
+		        </div>
+		    </form>
+		</body>
+	</html>
 
 ![(그림5)](https://github.com/danggai/danggai.github.io/blob/master/assets/image/20200207/05.jpg?raw=true)
 ![(그림6)](https://github.com/danggai/danggai.github.io/blob/master/assets/image/20200207/06.jpg?raw=true)
