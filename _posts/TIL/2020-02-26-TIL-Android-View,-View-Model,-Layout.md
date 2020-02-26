@@ -22,15 +22,15 @@ TIL은 Today I Learned의 약자로, 오늘 내가 배운 내용에 대한 간�
 
 View가 모여 Activity를 구성하며, Activity는 Task로의 할당으로 하여금 하나의 App으로서 동작한다.
 
-이 View는 계층(Hierarchy) 구조로 이루어져 있으며, 상속의 상속의 상속....을통해 자주 사용되는 여러가지 클래스들로 구현되어있다.
+이 View는 **계층 구조**<sub>Hierarchy Architecture</sub> 로 이루어져 있으며, 상속의 상속의 상속....을통해 자주 사용되는 여러가지 클래스들로 구현되어있다.
 
 버튼, 이미지, 리스트, 등등 모두가 View를 상속받아 만들어진 클래스의 일종이다.
 
 ## 🤞 View Group
 
-View Group는 여러가지 View를 담는 그릇(컨테이너)의 역할을 한다. 
+View Group는 여러가지 View를 담는 그릇<sub>Container</sub>의 역할을 한다. 
 
-기본적으로 직접적으로 눈에 보이는 형태는 아니며, backgroundcolor 등의 어트리뷰트를 이용해 눈에 보이도록 설정할 수 있기는 하다.
+기본적으로 직접적으로 눈에 보이는 형태는 아니며, backgroundcolor 등의 속성 값<sub>attributes</sub>을 이용해 눈에 보이도록 설정할 수 있기는 하다.
 
 이런 View Group를 각자의 특성을 가지도록 구현해둔 클래스를 우리는 Layout 이라고 한다.
 
@@ -40,11 +40,11 @@ Layout들은 기본적으로 View Group의 서브 클래스들로, View나 View 
 
 일반적으로 Layout의 클래스 명은 (특징)Layout 의 형태를 하고 있다.
 
-몇 년 전까지는 **RelativeLayout**(상대 레이아웃)이 가장 널리 사용되었으나, 글을 작성하는 현재는 **ConstraintLayout**(제약 레이아웃)이 그 자리를 차지하였다.
+몇 년 전까지는 **RelativeLayout**<sub>상대 레이아웃</sub>이 가장 널리 사용되었으나, 글을 작성하는 현재는 **ConstraintLayout**<sub>제약 레이아웃</sub>이 그 자리를 차지하였다.
 
 이 외의 Layout로도 **ConstraintLayout**이 하는 기능을 충분히 수행할 수 있었으나, 점점 안드로이드 기기가 다형화되고, 다양한 해상도를 지원해야함에 있어 더욱 많은 기능을 지원하는 **ConstraintLayout**이 널리 사용되게 되었다.
 
-ConstraintLayout은 Relative Positioning(상대 배치)은 물론, Circular Positioning(원형 배치), Visibility Behavior(가시성에 따른 동작), Dimension Constraints (크기 및 치수에 대한 제약조건) 등의 다양한 개발자 편의 기능들을 제공하는 꿀 레이아웃이다.
+ConstraintLayout은 Relative Positioning<sub>상대 배치</sub>은 물론, Circular Positioning<sub>원형 배치</sub>, Visibility Behavior<sub>가시성에 따른 동작</sub>, Dimension Constraints <sub>크기 및 치수에 대한 제약조건</sub> 등의 다양한 개발자 편의 기능들을 제공하는 꿀 레이아웃이다.
 
 
 > 참고한 블로그 : [https://www.charlezz.com/?p=669](https://www.charlezz.com/?p=669)
