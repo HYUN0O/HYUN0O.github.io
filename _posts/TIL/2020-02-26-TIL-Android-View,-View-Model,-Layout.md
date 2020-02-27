@@ -46,6 +46,14 @@ Layout들은 기본적으로 View Group의 서브 클래스들로, View나 View 
 
 ConstraintLayout은 Relative Positioning<sub>상대 배치</sub>은 물론, Circular Positioning<sub>원형 배치</sub>, Visibility Behavior<sub>가시성에 따른 동작</sub>, Dimension Constraints <sub>크기 및 치수에 대한 제약조건</sub> 등의 다양한 개발자 편의 기능들을 제공하는 꿀 레이아웃이다.
 
+![뷰의 계층 구조](http://www.soen.kr/book/android/book/4-1-1.files/image002.png)
+뷰의 계층 구조
+
+![뷰 그룹의 계층 구조](http://www.soen.kr/book/android/book/4-1-1.files/image003.png)
+뷰 그룹의 계층 구조
+
+
 
 > 참고한 블로그 : [https://www.charlezz.com/?p=669](https://www.charlezz.com/?p=669)
+> 그림 출처 : [http://www.soen.kr/book/android/book/4-1-1.htm](http://www.soen.kr/book/android/book/4-1-1.htm)
 
