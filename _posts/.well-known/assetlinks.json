@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "kr.danal.app.damoum",
+    "sha256_cert_fingerprints": ["4D:52:AD:2E:09:08:61:81:51:10:03:00:54:1B:C4:1A:EC:4C:89:E2:9F:45:C0:4F:06:D4:E5:84:EF:D2:91:D0"]
+  }
+}]
