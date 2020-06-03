@@ -24,8 +24,8 @@ popBackStack을 사용하니 기기에 따라 fragment를 pop하는 타이밍에
 
 
 나중에 천천히 코드를 다시 살펴보니, 아래와 같았다.
-- 정상적인 작동 순서: `메인 fragment -> webView fragment 실행 -> webView fragment 종료 -> passwordInput fragment 실행 -> 메인 fragment`
-- 비정상적인 작동 순서: `메인 fragment -> webView fragment 실행 -> <u>passwordInput fragment가 onStart까지만 실행 (고로 보이지는 않음) -> webView fragment 종료</u> -> 메인 fragment로 돌아옴` 순으로 일어나는 문제를 확인하였다.
+- 정상적인 작동 순서: *메인 fragment -> webView fragment 실행 -> webView fragment 종료 -> passwordInput fragment 실행 -> 메인 fragment* 순으로 일어나기를 기대함.
+- 비정상적인 작동 순서: *메인 fragment -> webView fragment 실행 -> **passwordInput fragment가 onStart까지만 실행 (고로 보이지는 않음) -> webView fragment 종료** -> 메인 fragment로 돌아옴* 순으로 일어나는 문제를 확인하였다.
 
 비정상적인 작동의 경우, webView fragment를 종료하는 함수가 `popBackStack(webViewFragment.TAG, POP_BACK_STACK_INCLUSIVE)`이기 때문에, 앱 위에 `main -> webView -> passwordInput` 순으로 올라가있는 뷰들이 webView까지 한번에 종료되며 passwordInput까지 종료되어 발생하는 문제임을 알 수 있었다.
 
