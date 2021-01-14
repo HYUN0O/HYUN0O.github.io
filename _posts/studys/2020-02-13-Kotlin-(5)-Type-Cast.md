@@ -2,7 +2,7 @@
 categories: 
    - Study
 tags:
-   - kotlin
+   - Kotlin
 ---
 오늘은 명시적, 묵시적 Type Casts에 대해 다루어보려고 한다.
 

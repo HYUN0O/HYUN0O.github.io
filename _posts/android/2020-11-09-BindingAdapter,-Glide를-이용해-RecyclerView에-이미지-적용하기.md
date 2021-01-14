@@ -1,6 +1,6 @@
 ---
 categories: 
-   - study
+   - Study
 tags: 
    - Databinding
    - Glide

@@ -2,7 +2,7 @@
 categories: 
    - Study
 tags:
-   - kotlin
+   - Kotlin
 ---
 오늘은 Kotlin (2)에서 다룬 when문과 성격은 비슷하지만 갈래는 다른 Null Operator와, 예외처리에 관해 공부하는 시간을 갖겠다.
 
