@@ -28,8 +28,6 @@ tags:
 
 
 
-------
-
 
 
 # Koin 적용
@@ -142,8 +140,6 @@ AndroidManifest.xml
 이를 통해, 앱 시작과 동시에 startKoin() 함수를 실행하게 된다.
 
 
-
----
 
 
 
