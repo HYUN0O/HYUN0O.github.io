@@ -12,7 +12,7 @@ tags:
 
 
 
-# 개요
+
 
 오늘은 안드로이드에 MVVM 디자인 패턴을 적용하기 위해, DataBinding을 프로젝트에 적용하는 과정을 기록해두려고 한다.
 
@@ -23,6 +23,12 @@ tags:
   - DataBinding을 통한 가독성 높고 사용하기 편한 코드 작성
 - 3개의 Tab를 ViewPager2로 구현
   - 각 Tab마다 RecyclerView를 지니며, 각각 Header, Footer, 모두를 Sticky하게 구현
+
+
+
+
+
+------
 
 
 
@@ -136,6 +142,8 @@ AndroidManifest.xml
 이를 통해, 앱 시작과 동시에 startKoin() 함수를 실행하게 된다.
 
 
+
+---
 
 
 
@@ -319,8 +327,6 @@ class MainFragment : BindingFragment<FragmentMainBinding/* 1 */>() {
 여기까지 성공적으로 진행했다면, MVVM 패턴으로 앱을 개발하기 위한 사전준비는 끝났다고 할 수 있다.
 
 다음 게시글에는 ViewPager2로 MainFragment에 있는 ViewPager로 이루어진 3개의 Tab Fragment를 리팩토링 해보려고 한다.
-
-
 
 
 
