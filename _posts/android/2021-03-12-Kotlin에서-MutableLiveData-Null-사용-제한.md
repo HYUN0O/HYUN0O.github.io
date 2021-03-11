@@ -8,15 +8,11 @@ Kotlin으로 Android 앱을 개발하다보면, 자연스럽게 LiveData, Mutabl
 
 보통 일어나는 LiveData와 Nullable의 충돌은 Kotlin과 LiveData의 환경부터 다르기 때문이다.
 
-
-
-
+ 
 
 이 이유는 LiveData의 원본 소스를 한번 들여다보면 알 수 있다.
 
-
-
-
+ 
 
 # 두 개념이 충돌하는 이유
 
@@ -38,9 +34,7 @@ public class MutableLiveData<T> extends LiveData<T> {
 }
 ```
 
-
-
-
+ 
 
 LiveData.java
 
@@ -65,13 +59,13 @@ LiveData.java
 ...
 ```
 
-
+ 
 
 위 소스코드는 LiveData의 원본 소스중, 값을 반환하는 부분의 코드이다.
 
 우리는 Data가 null일 경우, **null을 return 하도록 짜여있음**에 집중해야한다.
 
-
+ 
 
 
 
@@ -81,7 +75,7 @@ LiveData.java
 
 
 
-
+ 
 
 Java에서는 기본적으로 null을 허용하고, Kotlin에서는 기본적으로 null을 허용하지 않는다.
 
@@ -89,7 +83,7 @@ Java에서는 기본적으로 null을 허용하고, Kotlin에서는 기본적으
 
 
 
-
+ 
 
 LiveData를 그대로 사용한다면, 사용할 때 마다 nullCheck를 진행해야하는 번거로움이 발생하는 문제가 있다.
 
@@ -97,9 +91,11 @@ LiveData를 그대로 사용한다면, 사용할 때 마다 nullCheck를 진행�
 
 
 
+ 
+
 아래 클래스를 확인해보자.
 
-
+ 
 
 #  NonNullMutableLiveData.kt 
 
@@ -116,7 +112,7 @@ class NonNullMutableLiveData<T : Any>(defaultValue: T) : MutableLiveData<T>() {
 }
 ```
 
-
+ 
 
 
 
@@ -124,7 +120,7 @@ class NonNullMutableLiveData<T : Any>(defaultValue: T) : MutableLiveData<T>() {
 
 단순히 LiveData에서 Null을 return 할 수 있도록 허용해주던 `getValue()`를  !! 연산자를 통해 null을 return 할 수 없도록 제한하면 된다.
 
-
+ 
 
 # 변경 된 코드
 
@@ -132,13 +128,13 @@ class NonNullMutableLiveData<T : Any>(defaultValue: T) : MutableLiveData<T>() {
 
 
 
-
+ 
 
 위 이미지에서 확인할 수 있듯이 간단한 코드만으로 빌드 전에 미리 null check를 수행할 수 있어졌다. 무야호~
 
 
 
-
+ 
 
 # 참고자료
 

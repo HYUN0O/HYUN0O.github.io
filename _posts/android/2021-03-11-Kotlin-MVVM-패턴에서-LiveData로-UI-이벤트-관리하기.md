@@ -6,6 +6,8 @@
 
 
 
+
+
 1. ViewModel에서 변수 선언.
 2. 해당 변수를 Fragment에서 Observe.
 3. UI 이벤트 발생 시, ViewModel에서 해당 변수 값 변화.
@@ -14,7 +16,11 @@
 
 
 
+
+
 이 중 5번에 대한 처리를 하지 않아, Orientation이 변경되는 등의 액션이 발생하면 계속해서 이벤트가 발생했다.
+
+
 
 
 
@@ -40,6 +46,8 @@ fun openNewActivity(view: View) {
 
 
 
+
+
 Fragment.kt
 
 ```kotlin
@@ -53,6 +61,8 @@ mVM.lvStartAddAct.observe(viewLifecycleOwner, Observer{
 
 
 이런 방식을 따라갔기에, 화면이 재설계 될 때 마다 UI 이벤트가 반복적으로 발생하였다.
+
+
 
 
 
@@ -100,6 +110,8 @@ class EventObserver<T>(private val onEventUnhandledContent: (T) -> Unit) : Obser
 
 
 
+
+
 이 두 클래스를 생성 후, 아래처럼 코드를 변경해주면 Observe를 해제하지 않고도 단발적으로 UI 이벤트를 발생시킬 수 있다.
 
 
@@ -120,6 +132,8 @@ fun openNewActivity(view: View) {
 
 
 
+
+
 Fragment.kt
 
 ```kotlin
@@ -130,7 +144,11 @@ mVM.lvStartAddAct.observe(viewLifecycleOwner, EventObserver {
 
 
 
+
+
 PublishSubject나 다른 방법을 통해서 UI 이벤트를 처리할 수도 있지만, 이 방법을 통해 처리를 하면 아래와 같은 장점이 있다.
+
+
 
 
 
