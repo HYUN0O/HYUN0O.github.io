@@ -132,7 +132,7 @@ class NonNullMutableLiveData<T : Any>(defaultValue: T) : MutableLiveData<T>() {
 
  
 
-# 변경 된 코드
+# 개선 된 코드
 
 ![그림1](https://github.com/donggi9313/donggi9313.github.io/blob/master/assets/image/20210312/01.jpg?raw=true)
 
@@ -140,7 +140,85 @@ class NonNullMutableLiveData<T : Any>(defaultValue: T) : MutableLiveData<T>() {
 
  
 
-위 이미지에서 확인할 수 있듯이 간단한 코드만으로 빌드 전에 미리 null check를 수행할 수 있어졌다. 무야호~
+위 이미지에서 확인할 수 있듯이 간단한 코드만으로 빌드 전에 미리 null check를 수행할 수 있어졌다.
+
+
+
+
+
+아래는 NonNullMutableLiveData를 사용함으로 얻을 수 있는 이점을 한 눈에 볼 수 있도록 작성한 예시다.
+
+외출하기 전에 스스로의 복장을 검사하는 느낌의 함수로 작성하여 보았다.
+
+
+
+
+
+# 예시
+
+
+
+```kotlin
+    var shirt: MutableLiveData<String> = MutableLiveData()
+    var pants: MutableLiveData<String> = MutableLiveData()	
+
+    fun clothCheck() {
+        when {
+            shirt.value?.isNotEmpty()?:false && pants.value?.isNotEmpty()?:false -> {
+                wearCloths()
+            } shirt.value?.isEmpty() == true -> {
+                wearShirts()
+            } pants.value?.isEmpty() == true -> {
+                wearPants()
+            } else -> {
+                goOut()
+            }
+        }
+    }
+```
+
+1. `shirt.value`가 null 일 수 있기에 **nullCheck**
+2. `shirt.value`가 null이면 `shirt.value?.isNotEmpty()`또한 null이 되므로, **nullCheck**
+3. `shirt.value?.isEmpty()`가 true, false, 그리고 **null**일 수 있으므로 boolean 형 임에도 불구하고 `== true`를 **굳이** 사용해야함.
+
+
+
+굉장히 번거롭게 null을 반복적으로 check 해줘야하며, 코드의 가독성 또한 굉장히 떨어진다.
+
+
+
+아래는 `MutableLiveData`를 Null을 사용 할 수 없도록 수정한 `NonNullMutableLiveData`로 위의 함수를 재구성해보겠다.
+
+
+
+```kotlin
+    var shirt: NonNullMutableLiveData<String> = NonNullMutableLiveData("")
+    var pants: NonNullMutableLiveData<String> = NonNullMutableLiveData("")
+    
+    fun clothCheck() {
+        when {
+            shirt.value.isNotEmpty() && pants.value.isNotEmpty() -> {
+                wearCloths()
+            } shirt.value.isEmpty() -> {
+                wearShirts()
+            } pants.value.isEmpty() -> {
+                wearPants()
+            } else -> {
+                goOut() 
+            }
+        }
+    }
+```
+
+
+
+한 눈에도 차이를 알 수 있다.
+
+번거로운 nullCheck도 굉장히 많이 줄어들었으며 boolean임에도 `== true`를 사용 할 필요도 없어졌다. 무야호~
+
+
+
+
 
 
 
