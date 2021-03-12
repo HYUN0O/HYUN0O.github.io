@@ -1,3 +1,13 @@
+---
+categories: 
+   - Android
+tags: 
+   - Kotlin
+   - LiveData
+   - MVVM
+
+---
+
 
 
 # 개요
