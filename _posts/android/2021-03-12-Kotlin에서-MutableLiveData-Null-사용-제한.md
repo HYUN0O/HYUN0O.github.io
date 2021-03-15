@@ -10,7 +10,7 @@ tags:
 
 
 
-# 개요
+
 
 Kotlin으로 Android 앱을 개발하다보면, 자연스럽게 LiveData, MutableLiveData를 자주 사용하게 된다.
 
@@ -24,7 +24,7 @@ Kotlin으로 Android 앱을 개발하다보면, 자연스럽게 LiveData, Mutabl
 
  
 
-# 두 개념이 충돌하는 이유
+## 두 개념이 충돌하는 이유
 
 
 
@@ -107,7 +107,7 @@ LiveData를 그대로 사용한다면, 사용할 때 마다 nullCheck를 진행�
 
  
 
-#  NonNullMutableLiveData.kt 
+##  NonNullMutableLiveData.kt 
 
 NonNullMutableLiveData.kt
 
@@ -132,7 +132,7 @@ class NonNullMutableLiveData<T : Any>(defaultValue: T) : MutableLiveData<T>() {
 
  
 
-# 개선 된 코드
+## 개선 된 코드
 
 ![그림1](https://github.com/donggi9313/donggi9313.github.io/blob/master/assets/image/20210312/01.jpg?raw=true)
 
@@ -154,7 +154,7 @@ class NonNullMutableLiveData<T : Any>(defaultValue: T) : MutableLiveData<T>() {
 
 
 
-# 예시
+## 예시
 
 
 
@@ -187,7 +187,7 @@ class NonNullMutableLiveData<T : Any>(defaultValue: T) : MutableLiveData<T>() {
 
 
 
-아래는 `MutableLiveData`를 Null을 사용 할 수 없도록 수정한 `NonNullMutableLiveData`로 위의 함수를 재구성해보겠다.
+아래는 `MutableLiveData`를 Null을 사용 할 수 없도록 수정한 `NonNullMutableLiveData`로 위의 함수를 재구성한 코드다.
 
 
 
@@ -224,6 +224,6 @@ class NonNullMutableLiveData<T : Any>(defaultValue: T) : MutableLiveData<T>() {
 
  
 
-# 참고자료
+## 참고자료
 
 [Java Value는 언제나 null이다.](https://thdev.tech/kotlin/2020/11/24/kotlin_effective_12/)

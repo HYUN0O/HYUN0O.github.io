@@ -10,7 +10,7 @@ tags:
 
 
 
-# 개요
+
 
 안드로이드 앱 개발 중, MVVM 패턴에서 LiveData를 사용하여 UI 이벤트를 관리하기 위해서 기존에 아래와 같은 데이터 흐름 방식을 따라갔었다.
 
@@ -40,7 +40,7 @@ tags:
 
 
 
-# 기존 코드
+## 기존 코드
 
 ViewModel.kt
 
@@ -82,7 +82,7 @@ mVM.lvStartAddAct.observe(viewLifecycleOwner, Observer{
 
 
 
-#  Event.kt 
+##  Event.kt 
 
 Event.kt
 
@@ -128,7 +128,7 @@ class EventObserver<T>(private val onEventUnhandledContent: (T) -> Unit) : Obser
 
 
 
-# 변경된 코드
+## 변경된 코드
 
 ViewModel.kt
 
@@ -172,6 +172,6 @@ PublishSubject나 다른 방법을 통해서 UI 이벤트를 처리할 수도 �
 
 
 
-# 참고자료
+## 참고자료
 
 [Event.kt 참고 자료](https://gist.github.com/JoseAlcerreca/5b661f1800e1e654f07cc54fe87441af)
