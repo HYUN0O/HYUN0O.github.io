@@ -25,7 +25,7 @@ tags:
 
 
 
-![Buffer, skip](https://github.com/donggi9313/donggi9313.github.io/blob/master/assets/image/20210402/00.jpg?raw=true)
+![Buffer, skip](https://github.com/donggi9313/donggi9313.github.io/blob/master/assets/image/20210402/00.png?raw=true)
 
 
 
@@ -95,7 +95,7 @@ Rx를 사용하여 BackButton Event를 구현하기 위해서 극복해야 하�
 
 
 
-![Buffer, skip](https://github.com/donggi9313/donggi9313.github.io/blob/master/assets/image/20210402/01.jpg?raw=true)
+![Buffer, skip](https://github.com/donggi9313/donggi9313.github.io/blob/master/assets/image/20210402/01.png?raw=true)
 
 나는 이 중에서 `Buffer(count, skip)` 을 사용하여 구현하려고 한다.
 
@@ -106,7 +106,7 @@ Rx를 사용하여 BackButton Event를 구현하기 위해서 극복해야 하�
 
 
 
-![Buffer, skip](https://github.com/donggi9313/donggi9313.github.io/blob/master/assets/image/20210402/02.jpg?raw=true)
+![Buffer, skip](https://github.com/donggi9313/donggi9313.github.io/blob/master/assets/image/20210402/02.png?raw=true)
 
 `Buffer(4,2)`를 예로 들면 이런 느낌이다.
 
