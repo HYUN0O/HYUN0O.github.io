@@ -57,8 +57,6 @@ App 단계의 Gradle에 위 코드를 사용하여 라이브러리를 import 하
 
 
 
-## 
-
 ## 적용하기
 
 
@@ -220,6 +218,16 @@ public void setOnClickListener(OnClickListener onClickListener) {
 `MaterialRippleLayout`은 onClickEvent로 하위 Layout의 onClickEvent를 작동시키도록 되어있다.
 
 그러니, 기존 Layout의 onClickEvent를 `MaterialRippleLayout`으로 옮길 필요는 없다.
+
+
+
+
+
+## 추가
+
+위와 같이 복잡하게 라이브러리를 import하거나 할 필요 없이, 효과를 주고 싶은 layout에서 `android:background="?attr/selectableItemBackground"` 속성       을 지정하는 것으로도 ripple 효과는 쉽게 줄 수 있다.
+
+하지만 이 방법은 안드로이드의 버전에 따라 그려지는 view가 달리 보일 수 있기에, 자신이 만드는 앱이 지원하는 안드로이드의 **버전**과 지향하는 디자인에 따라서 선택해서 사용하면 된다.
 
 
 
