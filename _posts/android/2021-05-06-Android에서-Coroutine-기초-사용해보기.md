@@ -160,7 +160,9 @@ class MainViewModel : ViewModel() {
 - 별개의 Scope (이 경우, `viewModelScope`)에서 이루어지는 `.await()` 동작은 **동시에 진행**된다.
 - 한 개의 Scope 내에서 `.await()` 동작은 **먼저 동작이 끝난 후 이어서 진행 **(비동기적으로)된다.
 
--
+
+
+
 
 위 예제에서는 `launch`와 `async` 동작을 혼재하여 사용하였지만, 아래와 같은 차이가 있다.
 
@@ -220,7 +222,7 @@ class MainViewModel : ViewModel() {
 
 - `CoroutineScope`는 `withContext`의 한 유형이다.
   - `CoroutineScope`와 `withContext(this.coroutineContext)`는 같은 의미를 갖는다고 볼 수 있다.
-  - `withContext`는 현재 작동 중인 `Coroutine` 동작을 **일시 중지**시키고 
+  - `withContext`는 현재 작동 중인 `Coroutine` 동작을 **일시 중지**시키고 동작한다.
   - `CoroutineScope`는 `Dispatcher`을 지정할 수 없으며, 무조건 자신을 실행시킨 `context`를 통해 작동한다.
   - 아래 두 동작은 일반적으로 동일하게 작동하지만, 안드로이드 스튜디오는 윗 동작을 추천한다.
 
