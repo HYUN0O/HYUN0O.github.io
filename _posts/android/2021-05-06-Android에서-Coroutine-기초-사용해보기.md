@@ -331,6 +331,48 @@ class MainViewModel : ViewModel() {
 
 
 
+- 비동기 Coroutine 블럭을 생성 하는 함수는, `Scope`를 명시하여야 함.
+
+```kotlin
+private suspend fun init() = viewModelScope.launch {  // 가능
+    Log.e("init", "Start")
+
+    val deferredOne = async {			 // 새로운 코루틴 블럭
+        launchAll("ViewModel Init1")
+        true
+    }
+    val deferredTwo = async {			 // 새로운 코루틴 블럭
+        launchAll("ViewModel Init2-1")
+        launchAll("ViewModel Init2-2")
+        true
+    }
+
+    if (deferredOne.await() && deferredTwo.await()) Log.e("init", "Done")
+    else Log.e("init", "Failed")
+}
+```
+
+```kotlin
+private suspend fun init() {  			// 불가능
+    Log.e("init", "Start")
+
+    val deferredOne = async {			 // 새로운 코루틴 블럭
+        launchAll("ViewModel Init1")
+        true
+    }
+    val deferredTwo = async {			 // 새로운 코루틴 블럭
+        launchAll("ViewModel Init2-1")
+        launchAll("ViewModel Init2-2")
+        true
+    }
+
+    if (deferredOne.await() && deferredTwo.await()) Log.e("init", "Done")
+    else Log.e("init", "Failed")
+}
+```
+
+
+
 
 
 
@@ -348,6 +390,7 @@ class MainViewModel : ViewModel() {
 2. **비동기 Coroutine 선언** 시에는 아래 두 경우로 나눠 호출하자.
    1. 일반적인 경우에는 `suspend fun launchAll {}`를 통해 선언하고, `async{...}`블록에서 호출하는 것이 직관적이다.
    2. 굳이 다른 context에서 선언 해야 한다면, `withContext`를 통해 선언하자.
+3. **새로운 Coroutine 블럭을 호출 시**에는, 호출하는 함수에 `Scope`를 명시하여야 함. 
 
 
 
