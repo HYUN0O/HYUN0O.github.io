@@ -183,6 +183,10 @@ class MainViewModel : ViewModel() {
 
 하지만 세 가지 동작에 대해 조금 더 자세히 말하자면 아래와 같다.
 
+
+
+---
+
 - `viewModelScope`는 `CoroutineScope`를 ViewModel의 생명주기에 맞추어 간편히 사용할 수 있도록 만든 `CoroutineScope`의 한 유형이다.
   - `viewModelScope`는 `CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)`와 유사하게 동작한다.
   - 아래 두 동작은 일반적으로 동일하게 작동하지만, ViewModel에서는 편의성과 leak에서 안전하기 위해 위의 동작을 사용하기를 추천한다.
@@ -219,6 +223,10 @@ class MainViewModel : ViewModel() {
 ```
 
 
+
+
+
+---
 
 - `CoroutineScope`는 `withContext`의 한 유형이다.
   - `CoroutineScope`와 `withContext(this.coroutineContext)`는 같은 의미를 갖는다고 볼 수 있다.
@@ -286,6 +294,8 @@ class MainViewModel : ViewModel() {
 
 
 
+---
+
 - 아래 세 가지 비동기 Coroutine는 모두 같은 Thread에서 작동한다.
 
 ```kotlin
@@ -330,6 +340,8 @@ class MainViewModel : ViewModel() {
 
 
 
+
+---
 
 - 비동기 Coroutine 블럭을 생성 하는 함수는, `Scope`를 명시하여야 함.
 
