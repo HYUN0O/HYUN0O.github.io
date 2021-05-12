@@ -297,7 +297,9 @@ Coroutine의 특성 상 병렬 처리가 아닌 **동시 처리**이므로 한 T
 
 ## Source Code
 
-https://github.com/danggai/WorkerExercise
+
+
+[https://github.com/danggai/WorkerExercise](https://github.com/danggai/WorkerExercise)
 
 이 포스팅 내의 코드는 위 주소에 저장해둔 연습용 프로젝트를 통해 작성 됨.
 
@@ -307,8 +309,8 @@ https://github.com/danggai/WorkerExercise
 
 ## 참고
 
-https://dongsik93.github.io/til/2020/05/15/til-jetpack-workmanager/
+[https://dongsik93.github.io/til/2020/05/15/til-jetpack-workmanager/](https://dongsik93.github.io/til/2020/05/15/til-jetpack-workmanager/)
 
-https://developer.android.com/topic/libraries/architecture/workmanager/advanced/coroutineworker?hl=ko
+[https://developer.android.com/topic/libraries/architecture/workmanager/advanced/coroutineworker?hl=ko](https://developer.android.com/topic/libraries/architecture/workmanager/advanced/coroutineworker?hl=ko)
 
-https://aroundck.tistory.com/7208
+[https://aroundck.tistory.com/7208](https://aroundck.tistory.com/7208)
