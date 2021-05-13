@@ -18,6 +18,8 @@ Worker가 필요로 하는 기본 패러미터인  `(context: Context, workerPar
 
 하지만, Worker가 기본으로 필요로하는 패러미터 외의 값이 추가로 필요한 경우, WorkerFactory를 우리가 직접 커스텀하는 것으로 추가로 할당할 수 있다.
 
+하지만, Koin을 사용하여 module에서 DI를 주입하는 방법으로 Worker에 패러미터를 주입해주는 방법도 있기에, 오늘은 이 방법에 대해 다루어보려고 한다.
+
 만약 WorkManager에 대해 잘 모른다면, [이 포스팅](https://danggai.github.io/android/Android%EC%97%90%EC%84%9C-WorkManager-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/)을 참고하여 간단히 알아볼 수 있다.
 
 
@@ -30,12 +32,14 @@ Worker는 기본적으로 `Worker(context, workerParams)`로, 2가지의 패러�
 
 하지만, 프로젝트 진행 중 Worker에서도 Retrofit을 통한 API 통신의 필요성이 나타났다.
 
-이에 Retrofit API를 쉽게 사용할 수 있도록 설계해둔 `apiRepository` 클래스가 필요해져 Worker의 패러미터를 확장시킨 나만의 Worker를 아래와 같이 구현 후 컴파일하였다.
+이에 Retrofit API를 쉽게 사용할 수 있도록 설계해둔 `apiRepository` 에 Worker에서도 접근할 필요가 생겼다.
+
+Worker의 패러미터를 확장시킨 나만의 Worker를 아래와 같이 구현 후 컴파일하였다.
 
 ```kotlin
 // RefreshWorker.kt
 
-class RefreshWorker (private val api: ApiRepository, context: Context, workerParams: WorkerParameters) :
+class RefreshWorker (context: Context, workerParams: WorkerParameters, private val api: ApiRepository) :
     Worker(context, workerParams) {
 
     override fun doWork(): Result {
@@ -89,9 +93,11 @@ def koin_version = "2.2.2"
 implementation "org.koin:koin-androidx-workmanager:$koin_version"
 ```
 
-포스팅 작성중은 2021년 5월 13일 기준, 2.2.2 버전이 가장 최신 버전이기에 추가했다.
+포스팅 작성중은 2021년 5월 13일 기준, 2.2.2 버전이 가장 최신 버전이다.
 
-기본 Koin 사용을 위한 라이브러리 말고, `koin-androidx-workmanager`를 추가로 implement 해주어야 한다.
+기본 Koin 사용을 위한 라이브러리 말고, `koin-androidx-workmanager`를 추가로 implement 해주어야 workManager과 관련된 DI주입이 가능하다.
+
+이는 Koin 2.2 릴리즈, 3.0.0 알파 릴리즈버전부터 지원한다.
 
 
 
@@ -139,7 +145,7 @@ val repositoryModule = module {
 
 // WorkerFactoryModule.kt
 val WorkerFactoryModule = module {
-    worker { params -> RefreshWorker(get(), get(), workerParams = params.get()) }
+    worker { params -> RefreshWorker(get(), workerParams = params.get(), get()) }
 }
 ```
 
