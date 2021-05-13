@@ -26,11 +26,11 @@ Worker가 필요로 하는 기본 패러미터인  `(context: Context, workerPar
 
 ## 문제
 
-우리는 Worker의 기본 형이 `Worker(context, workerParams)`임을 학습했다.
+Worker는 기본적으로 `Worker(context, workerParams)`로, 2가지의 패러미터를 갖는다.
 
-하지만, 프로젝트 진행 중 Worker에서도 Retrofit을 통한 API 통신이 필요해졌다.
+하지만, 프로젝트 진행 중 Worker에서도 Retrofit을 통한 API 통신의 필요성이 나타났다.
 
-이에 Retrofit API를 쉽게 사용할 수 있도록 설계해둔 `apiRepository`가 필요해져서 Worker의 패러미터를 확장시켜서 아래와 같이 나만의 Worker을 생성하고, 컴파일하였다.
+이에 Retrofit API를 쉽게 사용할 수 있도록 설계해둔 `apiRepository` 클래스가 필요해져 Worker의 패러미터를 확장시킨 나만의 Worker를 아래와 같이 구현 후 컴파일하였다.
 
 ```kotlin
 // RefreshWorker.kt
@@ -64,13 +64,15 @@ class RefreshWorker (private val api: ApiRepository, context: Context, workerPar
 2021-05-13 10:01:06.256 7686-7730/danggai.app.parcelwhere E/WM-WorkerWrapper: Could not create Worker danggai.app.parcelwhere.worker.RefreshWorker
 ```
 
+대충 `apiRepository`에 어떤 패러미터 값을 매칭해줘야 하는지 알 수 없다는 에러.
+
 
 
 이는, 앱이 실행될 때 까지는 문제가 없지만, Worker을 인스턴스화 할 수 있는 올바른 초기화 방법이 존재하지 않기 때문에 이런 에러가 발생한다.
 
-이런 문제를 해결하기 위해 우리는 WorkerFactory를 커스텀 해주어야 한다.
+이런 문제를 해결하기 위해 우리는 WorkerFactory를 커스텀하는 방법도 있으나, Koin을 사용하여 DI를 주입해주는 것으로 조금 더 간단하게 문제를 해결할 수 있다.
 
-WorkerFactory를 커스텀 해주기 위해서는 아래와 같은 단계를 거쳐 작업을 진행하여야 한다.
+Koin으로 WorkManager에 DI를 주입하는 과정은 아래와 같다.
 
 
 
