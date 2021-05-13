@@ -125,44 +125,7 @@ implementation "org.koin:koin-androidx-workmanager:$koin_version"
 
 ---
 
-## 3. 커스텀 WorkerFactory 구현
-
-아래와 같은 클래스를 생성하는 것으로 우리가 원하는 패러미터를 가진 Worker를 만들기 위해 Custom WorkerFactory를 구현할 수 있다.
-
-
-
-```kotlin
-// MyWorkerFactory.kt
-
-class MyWorkerFactory(private val api: ApiRepository): WorkerFactory() {
-    override fun createWorker(
-        appContext: Context,
-        workerClassName: String,
-        workerParameters: WorkerParameters,
-    ): ListenableWorker? {
-        log.e(workerClassName)
-        log.e(RefreshWorker::class.java.name)
-        return when (workerClassName) {
-            RefreshWorker::class.java.name -> {
-                RefreshWorker(api, appContext, workerParameters)
-            }
-            else -> null        // If you return null, delegate base class to the default workerFactory.
-        }
-    }
-}
-```
-
-- `workerClassName`에 따라 원하는 형태의 Worker을 return하도록 구성해주면 된다.
-
-- `null`을 return 하는 경우, 기본 workerFactory에서 제공하는 기본 형태의 worker을 전달한다.
-
-
-
-[commit fb0ac39](https://github.com/danggai/FindMyPackage/commit/fb0ac39ef7f94e62a19b5f402801b2d44a9b4d27)
-
----
-
-## 4. WorkManagerModule 생성하기
+## 3. WorkManagerModule 생성하기
 
 
 
@@ -186,13 +149,13 @@ val WorkerFactoryModule = module {
 
 
 
-[ApiRepository](https://github.com/danggai/FindMyPackage/blob/dev/app/src/main/java/danggai/app/parcelwhere/data/api/ApiRepository.kt)
+[ApiRepository.kt의 Raw Code](https://github.com/danggai/FindMyPackage/blob/dev/app/src/main/java/danggai/app/parcelwhere/data/api/ApiRepository.kt)
 
 [commit 5cdec73](https://github.com/danggai/FindMyPackage/commit/5cdec73889f4c6819b98e326d11ce0481a6d0891)
 
 ---
 
-## 5. App.kt에서 의존성 주입하기
+## 4. App.kt에서 의존성 주입하기
 
 ```kotlin
 class App: Application() {
