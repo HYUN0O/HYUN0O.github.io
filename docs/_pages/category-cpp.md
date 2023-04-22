@@ -1,7 +1,7 @@
 ---
 title: "C"
-layout: categories
-permalink: https://HYUN0O.github.io/cpp
+layout: archive
+permalink: /cpp
 ---
 
 
