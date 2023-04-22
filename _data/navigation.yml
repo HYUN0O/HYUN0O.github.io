@@ -12,15 +12,13 @@ main:
   #   url: /sitemap/
   # - title: "Quick-Start Guide"
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-
-sidebar-category:
+  
+  sidebar-category:
   - title: "PROGRAMMING"
     children:
       - title: "C"
-          url: "https://HYUN0O.github.io/cpp
-         
+        url: "/cpp"
       - title: "JAVA"
-          url: "https://HYUN0O.github.io/JPA"
-         
+        url:  "/JPA"
       - title: "BACKJOON"
-          url: "https://HYUN0O.github.io/BACKJOON"
+        url:  "/BACKJOON"
