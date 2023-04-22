@@ -106,7 +106,7 @@ analytics:
 # Site Author
 author:
   name             : "지현콩"
-  avatar           : #/assets/JiHyun.jpg"
+  avatar           : "/assets/JiHyun.jpg"
   bio              : "지현이의 **공부 기록**"
   location         : "KOREA, GYEONGGI-DO"
   email            :
