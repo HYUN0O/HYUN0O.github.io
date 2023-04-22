@@ -16,9 +16,12 @@ main:
 sidebar-category:
   - title: "PROGRAMMING"
     children:
-  - title: "C"
-    url: "/cpp"
-  - title: "JAVA"
-    url:  "/JPA"
-  - title: "BACKJOON"
-    url:  "/BACKJOON"
+     - title: "C"
+         url: "/cpp"
+         category: "cpp"
+     - title: "JAVA"
+         url: "/JPA"
+         category: "JPA"
+     - title: "BACKJOON"
+         url: "/BACKJOON"
+         category: "BACKJOON"
