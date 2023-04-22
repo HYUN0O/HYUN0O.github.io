@@ -17,8 +17,8 @@ sidebar-category:
   - title: "PROGRAMMING"
     children:
   - title: "C"
-    url: "/cpp"
+    url: "https://HYUN0O.github.io/cpp"
   - title: "JAVA"
-    url:  "/JPA"
+    url:  "https://HYUN0O.github.io/JPA"
   - title: "BACKJOON"
-    url:  "/BACKJOON"
+    url:  "https://HYUN0O.github.io/BACKJOON"
