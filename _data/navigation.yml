@@ -16,7 +16,7 @@ main:
 sidebar-category:
   - title: "PROGRAMMING"
     children:
-     - title: "C"
+     - title: "C++"
          url: "/cpp"
          category: "cpp"
      - title: "JAVA"
