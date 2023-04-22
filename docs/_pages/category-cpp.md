@@ -1,6 +1,6 @@
 ---
 title: "C"
-layout: archive
+layout: categories
 permalink: https://HYUN0O.github.io/cpp
 ---
 
