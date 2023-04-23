@@ -1,7 +1,8 @@
 ---
 title: "C"
 layout: archive
-permalink: /cpp
+permalink: /cpp/
+outhor_profile: true
 ---
 
 
