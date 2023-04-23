@@ -1,6 +1,6 @@
 ---
 title: "C"
-layout: archive
+layout: post
 permalink: /cpp/
 outhor_profile: true
 ---
