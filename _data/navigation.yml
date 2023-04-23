@@ -16,7 +16,10 @@ sidebar-category:
     children:
       - title: "C"
         url: "/cpp/"
+        category: "cpp"
       - title: "JAVA"
         url:  "/JPA/"
+        category: "JPA"
       - title: "BACKJOON"
         url:  "/BACKJOON/"
+        category: "BACKJOON"
