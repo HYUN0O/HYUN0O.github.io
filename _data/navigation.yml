@@ -17,8 +17,8 @@ main:
   - title: "PROGRAMMING"
     children:
       - title: "C"
-        url: "/cpp"
+        url: "/cpp/"
       - title: "JAVA"
-        url:  "/JPA"
+        url:  "/JPA/"
       - title: "BACKJOON"
-        url:  "/BACKJOON"
+        url:  "/BACKJOON/"
