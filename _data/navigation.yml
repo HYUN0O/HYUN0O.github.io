@@ -15,7 +15,7 @@ sidebar-category:
   - title: "PROGRAMMING"
     children:
       - title: "C"
-        url: "/cpp/"
+        url: "/cpp/index.html"
         category: "cpp"
       - title: "JAVA"
         url:  "/JPA/"
