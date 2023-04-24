@@ -1,6 +1,6 @@
 ---
 title: "C"
-layout: categories
+layout: archive
 permalink: /cpp/
 ---
 
