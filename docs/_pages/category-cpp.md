@@ -1,7 +1,7 @@
 ---
 title: "C"
 layout: category
-permalink: categories/cpp/
+permalink: /categories/cpp/
 author_profile: true
 sidebar_main: true
 ---
