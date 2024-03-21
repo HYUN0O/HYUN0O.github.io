@@ -1,6 +1,6 @@
 ---
 title: "C"
-layout: archive
+layout: categories
 permalink: categories/cpp/
 author_profile: true
 sidebar_main: true
