@@ -91,10 +91,10 @@ docs:
 
 # sidebar navigation list sample
 sidebar-sample:
-  - title: "Parent Page A"
+  - title: "PROGRAMMINGING"
     children:
-      - title: "Child Page A1"
-        url: /
+      - title: "C"
+        url: /cpp
       - title: "Child Page A2"
         url: /
       - title: "Child Page A3"
